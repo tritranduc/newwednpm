@@ -1,0 +1,9 @@
+extends layout
+block content
+    h1 user
+    form(action='/users/search', method='get')
+        input(type='text', name='q',value = valueinput)
+        button search
+    ul
+        each users in userss
+            li= users.id + ":" + users.name
