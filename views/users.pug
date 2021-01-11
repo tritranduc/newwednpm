@@ -1,9 +1,13 @@
 extends layout
 block content
-    h1 user
-    form(action='/users/search', method='get')
-        input(type='text', name='q',value = valueinput)
-        button search
-    ul
+    blockquote.blockquote.text-center
+        h1.mb-0 user
+    form.form-inline.md-form.mr-auto.mb-4(action='/users/search', method='get')
+        input.form-control.mr-sm-2(type='text', name='q',value = valueinput)
+        br
+        blockquote.blockquote.text-right
+        button.btn.btn-primary(type='submit') Search
+    ul.list-group
         each users in userss
-            li= users.id + ":" + users.name
+            li.list-group-item.active= users.id + ":" + users.name
+            br
