@@ -15,11 +15,12 @@ db.defaults({ posts: [], user: [], count: 0 })
 
 
 var user = db.get('user').value()
-var users = db.get('user')
+var users= db.get('user')
 
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+
   res.render("users",{userss: user , valueinput : ""});
 });
 router.get("/search/", (res,req)=>{
@@ -29,49 +30,7 @@ router.get("/search/", (res,req)=>{
   });
   req.render("users",{userss:matchedusers,valueinput : q.toLowerCase()})
 })
-router.get("/create",(req,res)=>{
-  res.render("create_user")
-})
-function check_data (req,res,next){
-  var body = req.body
-  var name = body.name
-  var email = body.email
-  var password = body.password
-  var phone = body.phone
-  var send = {id : shortid.generate() ,name:name , email:email,password:password,phone:phone}
-  var error = []
-  if (!name){
-    error.push("name is required")
-  }
-  if (!email){
-    error.push("email is required")
-  }
-  if (!password){
-    error.push("password is required")
-  }
-  if (!phone){
-    error.push("phone is required")
-  }
-  if (error.length){
-    res.render("create_user",{
-      errors:error,
-      values:send
-    })
-    return;
-  }
-  next()
-}
-router.post("/create",check_data,(req,res)=>{
-  var body = req.body
-  var name = body.name
-  var email = body.email
-  var password = body.password
-  var phone = body.phone
-  var send = {id : shortid.generate() ,name:name , email:email,password:password,phone:phone}
-  users.push(send).write()
-  console.log(send)
-  res.redirect("/users")
-})
+
 router.get("/:id",(req,res)=>{
   res.render("showuser",{data : users.find({id:req.params.id}).value()})
 })

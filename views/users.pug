@@ -2,7 +2,12 @@ extends layout
 block content
     blockquote.blockquote.text-center
         h1.mb-0 user
-        a(href='users/create') new users
+        h1.mb-0= "hello" + user ? user.name : ""
+        a(href='auth/create') new users
+        span &nbsp
+        a(href='auth/logout') logout
+        span &nbsp
+        a(href='auth/login') login
     form.form-inline.md-form.mr-auto.mb-4(action='/users/search', method='get')
         input.form-control.mr-sm-2(type='text', name='q',value = valueinput)
         br

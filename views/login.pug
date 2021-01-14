@@ -1,2 +1,16 @@
 extends layout
 block content
+    h1 login
+    h5 create user :
+    a(href="/auth/create") sign up
+    if(errors)
+        each error in errors
+            .alert.alert-info= error
+    form(action='/auth/login', method='post')
+        .form-group
+            label(for="email") email:
+            input#email.form-control(type='text', name='email',value=values ? values.email : "")
+        .form-group
+            label(for="password") password:
+            input#password.form-control(type='password', name='password',value=values ? values.password : "")
+            input.btn.btn-primary(type='submit')

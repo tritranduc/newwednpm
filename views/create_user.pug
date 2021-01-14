@@ -2,24 +2,26 @@ extends layout
 
 
 block content
+    h1 create users
+    h5 login :
+    a(href="/auth/login") login
     if(errors)
         each error in errors
             .alert.alert-info= error
-    form(action='/users/create', method='post')
-        label(for="name") name:
-        input#name(type='text', name='name',value=values ? values.name : "")
-        br
-        br
-        label(for="email") email:
-        input#email(type='text', name='email',value=values ? values.email : "")
-        br
-        br
-        label(for="password") password:
-        input#password(type='password', name='password',value=values ? values.password : "")
-        br
-        br
-        label(for="phonenumber") phonenumber:
-        input#phonenumber(type='number', name='phone',value=values ? values.phone : "")
-        br
-        br
-        input(type='submit')
+    form(action='/auth/create', method='post')
+        .form-group
+            label(for="name") name:
+            input#name.form-control(type='text', name='name',value=values ? values.name : "")
+        .form-group
+            label(for="email") email:
+            input#email.form-control(type='text', name='email',value=values ? values.email : "")
+        .form-group
+            label(for="password") password:
+            input#password.form-control(type='password', name='password',value=values ? values.password : "")
+        .form-group
+            label(for="passwordConfirmation") passwordConfirmation:
+            input#passwordConfirmation.form-control(type='password', name='passwordConfirmation',value=values ? values.passwordConfirmation : "")
+        .form-group
+            label(for="phonenumber") phonenumber:
+            input#phonenumber.form-control(type='number', name='phone',value=values ? values.phone : "")
+        input.btn.btn-primary(type='submit')
