@@ -5,12 +5,12 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 
 module.exports.check_user = (req,res,next) => {
-    if (!req.cookies.userid){
+    if (!req.signedCookies.userid){
         res.redirect("/auth/login")
         return;
     }
-    console.log(req.cookies.userid)
-    var user = db.get("user").find({id : req.cookies.userid}).value();
+    console.log(req.signedCookies.userid)
+    var user = db.get("user").find({id : req.signedCookies.userid}).value();
     if (!user){
         res.redirect("/auth/login")
         return;

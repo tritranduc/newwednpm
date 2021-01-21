@@ -1,3 +1,5 @@
+require('dotenv').config()
+console.log(process.env.session_secret)
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -5,14 +7,25 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
+const multer = require('multer');
+var shortid = require("shortid")
+var fs = require('fs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require("./routes/auth")
+var uploadfile = require("./routes/uploadfile")
+
 
 var check = require("./middleware/middlewareuser")
 
 var app = express();
+
+var dir = './public/uploads';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,9 +38,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse application/json
 app.use(bodyParser.json())
-app.use(cookieParser());
+app.use(cookieParser(process.env.session_secret));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride())
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './public/uploads/')
+  },
+  filename: function (req, file, cb) {
+    console.log(`${shortid.generate() + file.fieldname}-${Date.now()}.${file.mimetype.split("/").slice(1).join(".")}`)
+    cb(null, `${shortid.generate() + file.fieldname}-${Date.now()}.${file.mimetype.split("/").slice(1).join(".")}`)
+  }
+})
+
+var upload = multer({ storage: storage })
+///app.use(upload.array('file',1000000000000000000000000000000000000000000))
+app.use(upload.single('file'))
 
 
 
@@ -36,6 +63,8 @@ app.use(methodOverride())
 app.use('/',indexRouter);
 app.use('/users',check.check_user, usersRouter);
 app.use("/auth",authRouter)
+app.use("/uploadfile",uploadfile)
+
 
 
 

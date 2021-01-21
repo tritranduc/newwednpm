@@ -1,0 +1,16 @@
+extends layout
+block content
+    if(alerts)
+        .alert.alert-info= alerts
+    .container
+    .row
+        .col-sm-8
+        br
+        h4
+            | Node.js upload files - trungquandev
+        div
+        form(method='POST', enctype='multipart/form-data')
+            .form-group
+            label(for='example-input-file') &nbsp;
+            input.form-control-file.border(type='file', name='file')
+            button.btn.btn-primary(type='submit') Submit

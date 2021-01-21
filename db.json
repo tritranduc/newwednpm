@@ -9,5 +9,129 @@
       "phone": "0906338191"
     }
   ],
-  "count": 0
+  "count": 0,
+  "cart": [],
+  "sessionid": [],
+  "file": [
+    {
+      "fieldname": "file",
+      "originalname": "20201031_142559.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "./public/uploads/",
+      "filename": "gienu6d9VEfile-1611128732639.jpeg",
+      "path": "public\\uploads\\gienu6d9VEfile-1611128732639.jpeg",
+      "size": 729131
+    },
+    {
+      "fieldname": "file",
+      "originalname": "20201031_142559.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "./public/uploads/",
+      "filename": "p5wvZGA_nfile-1611129825076.jpeg",
+      "path": "public\\uploads\\p5wvZGA_nfile-1611129825076.jpeg",
+      "size": 729131
+    },
+    {
+      "fieldname": "file",
+      "originalname": "20201031_142559.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "./public/uploads/",
+      "filename": "Vp1QshW1sCfile-1611129923793.jpeg",
+      "path": "public\\uploads\\Vp1QshW1sCfile-1611129923793.jpeg",
+      "size": 729131
+    },
+    {
+      "fieldname": "file",
+      "originalname": "20201031_142559.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "./public/uploads/",
+      "filename": "dVdzfJuNgnfile-1611130092122.jpeg",
+      "path": "public\\uploads\\dVdzfJuNgnfile-1611130092122.jpeg",
+      "size": 729131
+    },
+    {
+      "fieldname": "file",
+      "originalname": "20201031_142559.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "./public/uploads/",
+      "filename": "Kz1fNsLOVwfile-1611130195131.jpeg",
+      "path": "public\\uploads\\Kz1fNsLOVwfile-1611130195131.jpeg",
+      "size": 729131
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "jyuRlI7Vnjfile-1611134283737.pdf",
+      "path": "public\\uploads\\jyuRlI7Vnjfile-1611134283737.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "NKU24Sz7jSfile-1611134433849.pdf",
+      "path": "public\\uploads\\NKU24Sz7jSfile-1611134433849.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "PdioZMbyYTfile-1611134488584.pdf",
+      "path": "public\\uploads\\PdioZMbyYTfile-1611134488584.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "xDXXGEDty6file-1611134612088.pdf",
+      "path": "public\\uploads\\xDXXGEDty6file-1611134612088.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "qZCFxuutVIfile-1611134727651.pdf",
+      "path": "public\\uploads\\qZCFxuutVIfile-1611134727651.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "N_IUtfZhM0file-1611134776890.pdf",
+      "path": "public\\uploads\\N_IUtfZhM0file-1611134776890.pdf",
+      "size": 2259572
+    },
+    {
+      "fieldname": "file",
+      "originalname": "K20KTPM_Phung Thi Minh Ly_Luan van.pdf",
+      "encoding": "7bit",
+      "mimetype": "application/pdf",
+      "destination": "./public/uploads/",
+      "filename": "GEpJqq3V1Cfile-1611134989751.pdf",
+      "path": "public\\uploads\\GEpJqq3V1Cfile-1611134989751.pdf",
+      "size": 2259572
+    }
+  ]
 }

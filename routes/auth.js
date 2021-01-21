@@ -54,7 +54,9 @@ router.post("/create",check_data,(req,res)=>{
     var send = res.locals.send
     users.push(send).write()
     console.log(send)
-    res.cookie('userid', send.id)
+    res.cookie('userid', send.id,{
+        signed:true
+    })
     res.redirect("/users")
 })
 
@@ -84,7 +86,9 @@ router.post("/login",(req,res,next)=>{
         })
         return;
     }
-    res.cookie('userid', user.id)
+    res.cookie('userid', user.id,{
+        signed:true
+    })
     res.redirect(301, '/users')
 });
 router.get("/logout",(req,res)=>{
